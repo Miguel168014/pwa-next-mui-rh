@@ -9,7 +9,7 @@ import {
 const MainSection = () => {
   const title = "Vos queres crecer.\n Nosotros te queremos ayudar";
   const subtitle =
-    "Crea una web con plantillas impecables, fácil edición y sin codificación.";
+    "¡Usar Roomsite es relamentesencillo! \n Sigue estos tips para que tu experienciasea realmente sensacional.";
   const sm = useMediaQuery("min-width(600px)");
 
   return (
@@ -76,7 +76,7 @@ const MainSection = () => {
             sm: "left",
           }}
         >
-          <Button variant="contained">Comienza a crear</Button>
+          <Button variant="contained">siguiente</Button>
         </Box>
 
         <Box
