@@ -7,10 +7,8 @@ import {
 } from "@mui/material";
 
 const MainSection = () => {
-  const title = "Vos queres crecer.\n Nosotros te queremos ayudar";
   const subtitle =
-    "¡Usar Roomsite es relamentesencillo! \n Sigue estos tips para que tu experienciasea realmente sensacional.";
-  const sm = useMediaQuery("min-width(600px)");
+    "¡Usar Roomsite es realmente sencillo! \n Sigue estos tips para que tu experienciasea realmente sensacional.";
 
   return (
     <Container
@@ -36,26 +34,23 @@ const MainSection = () => {
         height={{
           xs: "92vh",
         }}
-      >
+       >
         <Box
-          gridArea={"title"}
-          alignSelf={{
-            xs: "end",
-            sm: "end",
-          }}
-          textAlign={{
-            xs: "center",
-            sm: "left",
-          }}
-        >
-          <Typography variant={sm ? "h2" : "h3"} fontWeight="bold">
-            {title}
-          </Typography>
-        </Box>
+        gridArea={"img"}
+        sx={{
+          backgroundImage: `url("pic_trulli.jpg")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          style: "width:250px;height:300px;"
+        }}
+      />
+    </Box>
+
         <Box
           textAlign={{
             xs: "center",
-            sm: "left",
+            sm: "center",
           }}
           gridArea={"subtitle"}
           alignSelf={{
@@ -69,26 +64,16 @@ const MainSection = () => {
           alignSelf={{
             xs: "start",
             sm: "start",
+            style: "color:#6647FF;"
           }}
           display={"flex"}
           justifySelf={{
             xs: "center",
-            sm: "left",
+            sm: "center",
           }}
         >
           <Button variant="contained">siguiente</Button>
         </Box>
-
-        <Box
-          gridArea={"img"}
-          sx={{
-            backgroundImage: `url("https://picsum.photos/1200/800")`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
-        />
-      </Box>
     </Container>
   );
 };
