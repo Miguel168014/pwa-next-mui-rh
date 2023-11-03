@@ -33,6 +33,11 @@ const linksRight = [
     href: "/register",
     icon: <AppRegistration />,
   },
+  {
+    label: "Home",
+    href: "/",
+    icon: <AppRegistration />,
+  },
 ];
 
 const Header = () => (

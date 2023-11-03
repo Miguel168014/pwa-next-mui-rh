@@ -38,6 +38,9 @@ const Login = () => {
         >
           Iniciar Sesion
         </Button>
+        <Typography variant="caption" color={"inherit"}>
+          OLVIDASTE LA CONTRASEÑA?
+        </Typography>
       </Stack>
     </Container>
   );

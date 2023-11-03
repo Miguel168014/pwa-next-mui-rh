@@ -4,91 +4,39 @@ import {
   Container,
   Typography,
   useMediaQuery,
+  Stack,
+  BottomNavigation,
 } from "@mui/material";
-
+import { typography } from "@mui/system";
+import styless from "./MainSection.module.css";
 const MainSection = () => {
-  const title = "Vos queres crecer.\n Nosotros te queremos ayudar";
-  const subtitle =
-    "¡Usar Roomsite es relamentesencillo! \n Sigue estos tips para que tu experienciasea realmente sensacional.";
-  const sm = useMediaQuery("min-width(600px)");
-
   return (
-    <Container
-      sx={{
-        background: "none",
-      }}
-    >
-      <Box
-        display={"grid"}
-        gridTemplateColumns={{
-          xs: "1fr",
-          sm: "1fr 1fr",
-        }}
-        gridTemplateRows="auto"
-        gridTemplateAreas={{
-          xs: "'.' '.' 'title' 'subtitle' 'btn'",
-          sm: "'. img' 'title img' 'subtitle img' 'btn img' '. img'",
-        }}
-        columnGap={{
-          xs: 0,
-          sm: 2,
-        }}
-        height={{
-          xs: "92vh",
-        }}
-      >
-        <Box
-          gridArea={"title"}
-          alignSelf={{
-            xs: "end",
-            sm: "end",
-          }}
-          textAlign={{
-            xs: "center",
-            sm: "left",
-          }}
-        >
-          <Typography variant={sm ? "h2" : "h3"} fontWeight="bold">
-            {title}
-          </Typography>
-        </Box>
-        <Box
-          textAlign={{
-            xs: "center",
-            sm: "left",
-          }}
-          gridArea={"subtitle"}
-          alignSelf={{
-            xs: "center",
-          }}
-        >
-          <Typography variant="h5">{subtitle}</Typography>
-        </Box>
-        <Box
-          gridArea={"btn"}
-          alignSelf={{
-            xs: "start",
-            sm: "start",
-          }}
-          display={"flex"}
-          justifySelf={{
-            xs: "center",
-            sm: "left",
-          }}
-        >
-          <Button variant="contained">siguiente</Button>
-        </Box>
-
-        <Box
-          gridArea={"img"}
-          sx={{
-            backgroundImage: `url("https://picsum.photos/1200/800")`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-          }}
+    <Container>
+      <Stack>
+        <img
+          src="https://e7.pngegg.com/pngimages/456/86/png-clipart-flat-design-city-drawing-city-building-text.png"
+          width="300"
+          height={"150"}
+          className={styless.imagen}
         />
+      </Stack>
+      <Box className={styless.textoPrincipal}>
+        <Typography>
+          Usa Room site es realmente sencillo. Sigue estos tips para que tu
+          experiencia sea realmente sensacional
+        </Typography>
       </Box>
+      <Stack className={styless.BotonPrincipal}>
+        <Button href="/login" variant="contained">
+          siguiente
+        </Button>
+        <Typography align="center" variant="caption">
+          No quieres ver mas de esto?
+        </Typography>
+        <Typography align="center" variant="caption">
+          Saltar
+        </Typography>
+      </Stack>
     </Container>
   );
 };
