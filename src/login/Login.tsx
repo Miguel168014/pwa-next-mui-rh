@@ -30,12 +30,8 @@ const Login = () => {
           variant="standard"
           type="password"
         />
-        <Button
-          variant="contained"
-          style={{
-            marginTop: "2rem",
-          }}
-        >
+
+        <Button href="/rooms" variant="contained" style={{ marginTop: "2rem" }}>
           Iniciar Sesion
         </Button>
         <Typography variant="caption" color={"inherit"}>
